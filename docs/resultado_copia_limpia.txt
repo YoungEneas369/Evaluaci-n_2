@@ -1,0 +1,12 @@
+Verificación del ZIP en carpeta temporal: OK
+Creación de base y cierre de consola: OK
+Autenticación con hash de producción y catálogo, por servicio en proceso aparte: OK
+Segundo proceso sobre la misma base sin duplicar datos: OK
+El recorrido interactivo autenticado se prueba con entradas simuladas en unittest.
+
+Datos de demostración creados. Usuarios: agente / AgenteRutaSur1! y admin / AdminRutaSur1!
+
+RUTASUR
+1. Iniciar sesión
+0. Salir
+Opción: 

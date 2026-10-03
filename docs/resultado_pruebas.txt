@@ -1,0 +1,40 @@
+test_errores_red_http_timeout (test_proyecto.ApiTest.test_errores_red_http_timeout) ... ok
+test_respuestas_invalidas (test_proyecto.ApiTest.test_respuestas_invalidas) ... ok
+test_abc_y_reconstruccion_subtipos (test_proyecto.ProyectoTest.test_abc_y_reconstruccion_subtipos) ... ok
+test_cancelacion_libera_una_sola_vez (test_proyecto.ProyectoTest.test_cancelacion_libera_una_sola_vez) ... ok
+test_crud_proveedor (test_proyecto.ProyectoTest.test_crud_proveedor) ... ok
+test_demo_no_duplica_al_reiniciar (test_proyecto.ProyectoTest.test_demo_no_duplica_al_reiniciar) ... ok
+test_error_api_no_ocupa_cupos_ni_guarda_reserva (test_proyecto.ProyectoTest.test_error_api_no_ocupa_cupos_ni_guarda_reserva) ... ok
+test_hash_salt_y_password_incorrecto (test_proyecto.ProyectoTest.test_hash_salt_y_password_incorrecto) ... ok
+test_no_elimina_paquete_con_reserva (test_proyecto.ProyectoTest.test_no_elimina_paquete_con_reserva) ... ok
+test_no_reduce_total_bajo_ocupados (test_proyecto.ProyectoTest.test_no_reduce_total_bajo_ocupados) ... ok
+test_no_sobrevende_cupos (test_proyecto.ProyectoTest.test_no_sobrevende_cupos) ... ok
+test_p01_arranque_menu_y_cierre (test_proyecto.ProyectoTest.test_p01_arranque_menu_y_cierre) ... ok
+test_p02_p03_crear_listar (test_proyecto.ProyectoTest.test_p02_p03_crear_listar) ... ok
+test_p04_actualizar_precio (test_proyecto.ProyectoTest.test_p04_actualizar_precio) ... ok
+test_p05_persistencia_otra_conexion (test_proyecto.ProyectoTest.test_p05_persistencia_otra_conexion) ... ok
+test_p06_eliminar_paquete_y_subtipo (test_proyecto.ProyectoTest.test_p06_eliminar_paquete_y_subtipo) ... ok
+test_p07_pasaporte_valido (test_proyecto.ProyectoTest.test_p07_pasaporte_valido) ... ok
+test_p08_pasaporte_vacio_y_menu_continua (test_proyecto.ProyectoTest.test_p08_pasaporte_vacio_y_menu_continua) ... ok
+test_p09_nacional_sin_api (test_proyecto.ProyectoTest.test_p09_nacional_sin_api) ... ok
+test_p10_internacional_convierte (test_proyecto.ProyectoTest.test_p10_internacional_convierte) ... ok
+test_p11_crucero_formula_propia (test_proyecto.ProyectoTest.test_p11_crucero_formula_propia) ... ok
+test_p12_p13_detalles_persisten_y_se_muestran (test_proyecto.ProyectoTest.test_p12_p13_detalles_persisten_y_se_muestran) ... ok
+test_p14_30_rechaza_50_confirma (test_proyecto.ProyectoTest.test_p14_30_rechaza_50_confirma) ... ok
+test_p15_cero_cupos (test_proyecto.ProyectoTest.test_p15_cero_cupos) ... ok
+test_p16_respuesta_api_persiste_valor_y_fecha (test_proyecto.ProyectoTest.test_p16_respuesta_api_persiste_valor_y_fecha) ... ok
+test_p17_sin_internet_menu_continua (test_proyecto.ProyectoTest.test_p17_sin_internet_menu_continua) ... ok
+test_p18_opcion_99_continua (test_proyecto.ProyectoTest.test_p18_opcion_99_continua) ... ok
+test_p19_abc_precio_y_viajeros_continua (test_proyecto.ProyectoTest.test_p19_abc_precio_y_viajeros_continua) ... ok
+test_precio_historico_no_cambia (test_proyecto.ProyectoTest.test_precio_historico_no_cambia) ... ok
+test_precio_negativo_nan_y_vacio (test_proyecto.ProyectoTest.test_precio_negativo_nan_y_vacio) ... ok
+test_roles_se_validan_fuera_del_menu (test_proyecto.ProyectoTest.test_roles_se_validan_fuera_del_menu) ... ok
+test_rollback_cabecera_cupos_y_cotizacion (test_proyecto.ProyectoTest.test_rollback_cabecera_cupos_y_cotizacion) ... ok
+test_sobrepago_y_cancelacion_con_pagos (test_proyecto.ProyectoTest.test_sobrepago_y_cancelacion_con_pagos) ... ok
+test_sql_parametrizado_y_crud_cliente (test_proyecto.ProyectoTest.test_sql_parametrizado_y_crud_cliente) ... ok
+test_total_impar_exige_siguiente_peso (test_proyecto.ProyectoTest.test_total_impar_exige_siguiente_peso) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 7.181s
+
+OK
