@@ -23,12 +23,19 @@ class Cliente: #Aquí creamos la clase cliente, tendrá atributos que son como s
         self.__nombre = nombre_nuevo
 
     # -> None indica que el método no retorna un resultado útil.
-    # Estos métodos públicos permiten consultar los atributos privados.
-    def get_nombre(self) -> str:
+    # Estas propiedades permiten leer los atributos privados sin usar paréntesis.
+    # El prefijo __ hace que Python cambie internamente el nombre del atributo 
+    # para evitar accesos accidentales desde fuera de la clase. 
+    @property
+    def nombre(self) -> str:
         return self.__nombre
 
-    def get_correo(self) -> str:
+    @property
+    def correo(self) -> str:
         return self.__correo
 
-    def get_telefono(self) -> str:
+    @property
+    def telefono(self) -> str:
         return self.__telefono
+
+

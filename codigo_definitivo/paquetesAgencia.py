@@ -8,9 +8,11 @@ class PaqueteNacional:
     def calcular_total(self, cantidad_viajeros: int) -> float:
         return cantidad_viajeros * self.__precio_por_viajero
 
-    # Permiten consultar los datos del paquete desde fuera de la clase.
-    def get_nombre(self) -> str:
+    # Propiedades de lectura: se consultan sin paréntesis desde fuera de la clase.
+    @property
+    def nombre(self) -> str:
         return self.__nombre
 
-    def get_precio_por_viajero(self) -> float:
+    @property
+    def precio_por_viajero(self) -> float:
         return self.__precio_por_viajero

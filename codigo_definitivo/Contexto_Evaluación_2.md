@@ -1,6 +1,6 @@
 # Contexto de Evaluación 2 — RutaSur
 
-Actualizado: 3 de octubre de 2026. Equipo: Cristopher Figueroa y Elías Reyes.
+Actualizado: 4 de octubre de 2026. Equipo: Cristopher Figueroa y Elías Reyes.
 
 ## 1. Objetivo y alcance de esta carpeta
 
@@ -16,14 +16,14 @@ El resto del repositorio contiene una implementación anterior y documentación 
 
 ## 2. Punto exacto en que vamos
 
-Completamos S6-P07: atributos privados y getters públicos. El próximo ejercicio es S6-P08: reemplazar getters por propiedades (`@property`), explicando el decorador y ajustando las lecturas en `main.py`.
+Completamos S6-P08: reemplazamos los getters por propiedades de lectura (@property) y ajustamos main.py para consultarlas sin paréntesis. Sigue S6-P09: comparar dos objetos y comprobar que cambiar uno no modifica el otro.
 
 Archivos actuales:
 
 | Archivo | Contenido |
 | --- | --- |
-| `cliente.py` | `Cliente`, con nombre, correo y teléfono privados; constructor; `cambiar_nombre`, `cambiar_correo`, `cambiar_telefono`; `get_nombre`, `get_correo`, `get_telefono` |
-| `paquetesAgencia.py` | Solo `PaqueteNacional`, con nombre y precio por viajero privados, getters y `calcular_total(cantidad_viajeros)` |
+| `cliente.py` | `Cliente`, con nombre, correo y teléfono privados; constructor; `cambiar_nombre`, `cambiar_correo`, `cambiar_telefono`; propiedades de lectura `nombre`, `correo`, `telefono` |
+| `paquetesAgencia.py` | Solo `PaqueteNacional`, con nombre y precio por viajero privados, propiedades de lectura y `calcular_total(cantidad_viajeros)` |
 | `main.py` | Crea dos clientes, consulta y cambia datos; crea un paquete nacional de 150000 CLP por viajero y calcula 300000 CLP para dos viajeros |
 | `README.md` | Estado resumido e instrucciones para ejecutar |
 | Este archivo | Contexto para continuar con otra IA o con el compañero |
@@ -36,7 +36,7 @@ python main.py
 
 No hay librerías externas necesarias en esta etapa. La ejecución del ejemplo se comprobó correctamente. Eso no equivale a aprobar el guion completo de evaluación.
 
-Todavía no hay en esta versión: propiedades, herencia, clase abstracta Paquete, internacional, crucero, reservas, viajeros, base de datos, autenticación, API ni menú interactivo. Los datos de los ejemplos se escriben en el código y se mantienen en memoria.
+Todavía no hay en esta versión: herencia, clase abstracta Paquete, internacional, crucero, reservas, viajeros, base de datos, autenticación, API ni menú interactivo. Los datos de los ejemplos se escriben en el código y se mantienen en memoria.
 
 ## 3. Cómo explicar al estudiante
 
@@ -62,7 +62,9 @@ Ideas ya explicadas que conviene reforzar:
 - Un método con `-> None` no entrega un resultado útil; eso no significa por sí solo que modifique un objeto. Nuestros métodos `cambiar_...` sí lo modifican.
 - Las anotaciones `str`, `int` y `float` no validan ni convierten automáticamente los valores.
 - El prefijo `__` cambia internamente el nombre del atributo para evitar accesos accidentales; no constituye seguridad absoluta.
-- `get_nombre()` se llama con paréntesis porque es un método. La sintaxis con `@property` es el próximo tema, aún sin implementar.
+- `get` no es una palabra especial de Python: es una convención para nombrar métodos que consultan datos. Podría llamarse obtener_nombre. def define el método y return entrega el resultado.
+- Renombramos get_nombre a nombre por elección propia: @property no elimina get_ automáticamente. El decorador permite consultar cliente.nombre sin paréntesis y ejecuta el método de lectura.
+- Las propiedades actuales son de solo lectura: cliente.nombre = otro_valor produce AttributeError. Para cambiarlo usamos cambiar_nombre. Se verificaron lectura, cambio por método y rechazo de asignación directa.
 
 El estudiante escribe sus propios comentarios y ejemplos. Leer los archivos antes de editar y conservar sus aportes, corrigiendo con explicación las imprecisiones. No avanzar varios ejercicios en una sola respuesta ni introducir arquitectura avanzada antes de la clase correspondiente.
 
@@ -79,7 +81,7 @@ La secuencia procede del resumen local de seis clases compartidas: S6, S7, S8, S
 | P05 | Métodos ingresar/entregar, sin retorno útil | Cambiar datos de contacto; el estudiante añadió cambiar_nombre: completado |
 | P06 | LineaDetalle, cantidad × precio y subtotal con retorno | PaqueteNacional: viajeros × precio por viajero: completado |
 | P07 | Atributos privados y getters públicos | Aplicado a Cliente y PaqueteNacional: completado |
-| P08 | Reemplazar getters por properties | Próximo paso |
+| P08 | Reemplazar getters por properties | Completado en ambas clases |
 | P09 | Dos objetos; modificar solo uno y comparar | Pendiente como ejercicio explícito, aunque ya usamos dos clientes |
 
 La adaptación de P06 fue intencional: en RutaSur los detalles están incluidos en el precio del paquete, por lo que no debemos introducir un doble cobro sumando nuevamente sus servicios.
@@ -159,6 +161,6 @@ No confundir el main.py de la raíz del repositorio con el de esta carpeta. Para
 
 ## 10. Cómo retomar con la IA
 
-Primero leer este documento y los tres archivos Python actuales. Explicar brevemente que estamos en S6-P07 y que sigue P08. Si el compañero quiere ponerse al día, repasar los pasos anteriores con los ejemplos existentes antes de avanzar. Si quiere continuar, hacer solo la transición a propiedades, explicarla y comprobar que el programa conserva su comportamiento.
+Primero leer este documento y los tres archivos Python actuales. Explicar brevemente que completamos S6-P08 y que sigue P09. Si el compañero quiere ponerse al día, repasar los pasos anteriores con los ejemplos existentes antes de avanzar. Si quiere continuar, hacer solo el ejercicio de independencia entre dos objetos, explicarlo y verificar que cambiar uno conserva los datos del otro.
 
 Este archivo comunica el contexto del equipo. Las nuevas indicaciones del usuario y los cambios reales en los archivos pueden actualizarlo; no debe tratarse como autorización para publicar, borrar o avanzar automáticamente sin un pedido correspondiente.
