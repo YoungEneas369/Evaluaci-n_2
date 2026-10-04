@@ -1,4 +1,4 @@
-class Cliente: #Aquí creamos la clase cliente, tendrá atributos que son como sus características. entonces vamos poniendo de que tipo será su valor. 
+class Cliente: #Aquí creamos la clase cliente, tendrá atributos que son como sus características. entonces vamos poniendo de que tipo será su valor.
 #Un Cliente tiene nombre, correo y telefono :3-
     __nombre: str #Valor string (candena de texto)
     __correo: str #Valor string (candena de texto)
@@ -19,10 +19,10 @@ class Cliente: #Aquí creamos la clase cliente, tendrá atributos que son como s
     def cambiar_telefono(self, telefono_nuevo: str) -> None:
         self.__telefono = telefono_nuevo
 
-    def cambiar_nombre(self, nombre_nuevo: str) -> None: 
+    def cambiar_nombre(self, nombre_nuevo: str) -> None:
         self.__nombre = nombre_nuevo
-        
-    #none significa que módifica el objeto y no un dato útil para guardar.
+
+    # -> None indica que el método no retorna un resultado útil.
     # Estos métodos públicos permiten consultar los atributos privados.
     def get_nombre(self) -> str:
         return self.__nombre
