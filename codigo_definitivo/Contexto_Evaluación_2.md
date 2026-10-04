@@ -16,7 +16,7 @@ El resto del repositorio contiene una implementación anterior y documentación 
 
 ## 2. Punto exacto en que vamos
 
-Completamos S6-P08: reemplazamos los getters por propiedades de lectura (@property) y ajustamos main.py para consultarlas sin paréntesis. Sigue S6-P09: comparar dos objetos y comprobar que cambiar uno no modifica el otro.
+Completamos S6-P08: reemplazamos los getters por propiedades de lectura (@property) y ajustamos main.py para consultarlas sin paréntesis. También completamos S6-P09: Lucía y Diego son objetos distintos y cambiar el correo de Lucía conserva el de Diego. Sigue S7, empezando por revisar el repositorio y preparar la rama de desarrollo.
 
 Archivos actuales:
 
@@ -82,7 +82,7 @@ La secuencia procede del resumen local de seis clases compartidas: S6, S7, S8, S
 | P06 | LineaDetalle, cantidad × precio y subtotal con retorno | PaqueteNacional: viajeros × precio por viajero: completado |
 | P07 | Atributos privados y getters públicos | Aplicado a Cliente y PaqueteNacional: completado |
 | P08 | Reemplazar getters por properties | Completado en ambas clases |
-| P09 | Dos objetos; modificar solo uno y comparar | Pendiente como ejercicio explícito, aunque ya usamos dos clientes |
+| P09 | Dos objetos; modificar solo uno y comparar | Completado con Lucía y Diego |
 
 La adaptación de P06 fue intencional: en RutaSur los detalles están incluidos en el precio del paquete, por lo que no debemos introducir un doble cobro sumando nuevamente sus servicios.
 
@@ -161,6 +161,9 @@ No confundir el main.py de la raíz del repositorio con el de esta carpeta. Para
 
 ## 10. Cómo retomar con la IA
 
-Primero leer este documento y los tres archivos Python actuales. Explicar brevemente que completamos S6-P08 y que sigue P09. Si el compañero quiere ponerse al día, repasar los pasos anteriores con los ejemplos existentes antes de avanzar. Si quiere continuar, hacer solo el ejercicio de independencia entre dos objetos, explicarlo y verificar que cambiar uno conserva los datos del otro.
+Primero leer este documento y los tres archivos Python actuales. Explicar brevemente que completamos S6-P09 y que sigue S7. Si el compañero quiere ponerse al día, repasar los pasos anteriores con los ejemplos existentes antes de avanzar. Si quiere continuar, comenzar por la preparación Git de S7 y avanzar un ejercicio a la vez hacia herencia, revisando el material del profesor.
 
 Este archivo comunica el contexto del equipo. Las nuevas indicaciones del usuario y los cambios reales en los archivos pueden actualizarlo; no debe tratarse como autorización para publicar, borrar o avanzar automáticamente sin un pedido correspondiente.
+
+
+Guía de la evolución completa: [PASO_A_PASO.md](PASO_A_PASO.md).

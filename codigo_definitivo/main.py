@@ -33,3 +33,18 @@ print("Total para dos viajeros en pesos chilenos:", total_viaje)
 #Consultas sobre nombre de paquete y precio por viajero
 print("Nombre del paquete:", paquete_sur.nombre)
 print("Precio por viajero:", paquete_sur.precio_por_viajero)
+
+# S6-P09: cada llamada a Cliente crea un objeto distinto con sus propios datos.
+cliente_lucia = Cliente("Lucía", "lucia@example.com", "+56911111111")
+cliente_diego = Cliente("Diego", "diego@example.com", "+56922222222")
+
+print("Antes del cambio:")
+print(cliente_lucia.nombre, cliente_lucia.correo)
+print(cliente_diego.nombre, cliente_diego.correo)
+
+# Aquí self representa solo a cliente_lucia; Diego conserva su correo.
+cliente_lucia.cambiar_correo("lucia.nuevo@example.com")
+
+print("Después de cambiar solo el correo de Lucía:")
+print(cliente_lucia.nombre, cliente_lucia.correo)
+print(cliente_diego.nombre, cliente_diego.correo)
