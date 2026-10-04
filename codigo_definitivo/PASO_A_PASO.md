@@ -1,6 +1,6 @@
 # RutaSur: paso a paso de lo que hemos construido
 
-Actualizado: 4 de octubre de 2026. Llegamos hasta S6-P09.
+Actualizado: 4 de octubre de 2026. Completamos S6 y comenzamos S7; consultar el paso 11 para el estado vigente.
 
 Esta guía explica la evolución del código. Los fragmentos de los primeros pasos son versiones anteriores para estudiar: no hay que agregarlos junto a las versiones actuales. Los archivos Python contienen la versión vigente.
 
@@ -147,3 +147,26 @@ Sigue S7. El material empieza por preparar el repositorio y la rama feature/desa
 Para RutaSur necesitaremos una clase general Paquete antes de conectar las especializaciones. PaqueteNacional será un tipo de Paquete. Eso se llama herencia. La API no corresponde a este primer paso: la estudiaremos en S15. No generar de una vez todas las clases pendientes.
 
 Para requisitos del negocio, decisiones pendientes y forma de enseñar, leer [Contexto_Evaluación_2.md](Contexto_Evaluación_2.md).
+
+## 11. Preparar S7: rama y clase general
+
+Creamos y seleccionamos feature/desarrollo con git switch -c feature/desarrollo dentro de agencia_viajes. La rama es local: crearla no publica en GitHub ni crea otra carpeta. No es necesario volver a clonar el repositorio ya existente.
+
+Para preparar el comportamiento común antes de crear hijas, renombramos PaqueteNacional a Paquete en paquetesAgencia.py y actualizamos la importación y la creación en main.py. Conservamos constructor, propiedades y calcular_total. No añadimos todavía herencia ni API.
+
+```python
+from paquetesAgencia import Paquete
+paquete_sur = Paquete("Viaje a Puerto Varas", 150000)
+print(paquete_sur.calcular_total(2))
+```
+
+El resultado sigue siendo 300000. La adaptación de S7-P04–P05 usa nuestro cálculo común, no la tarifa fija de 5000 del taller del profesor. Las clases nacional, internacional y crucero aparecerán como hijas en el siguiente ejercicio. Esta es una etapa intermedia: Paquete será abstracto cuando lleguemos a S8.
+
+
+## 12. Herencia, super y métodos propios (S7-P06 a P10)
+
+Se crearon PaqueteNacional, PaqueteInternacional y Crucero en archivos separados heredando de Paquete. Crucero añadió noches mediante constructor propio y super().__init__. Cada hija implementó calcular_total: nacional en CLP; internacional con cambio; crucero con cambio y recargo ilustrativo del 10 %. No hay API todavía. Las noches se guardaron como __noches y se leen con @property.
+
+## 13. Integración del trabajo de Elías
+
+Se incorporaron Persona y la jerarquía de trabajadores. Cliente ahora hereda Persona y requiere nombre, RUT, correo y teléfono. Se separó Viajero con pasaporte; el comprador no lo guarda. Los setters heredados validan nombre/RUT al construir y al modificar. Esta parte llegó por integración urgente y todavía debemos explicarla como siguiente ejercicio de aprendizaje. Ver INTEGRACION_EQUIPO.md para cambios de firmas, origen, límites y pruebas.
